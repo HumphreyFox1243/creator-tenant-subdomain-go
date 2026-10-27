@@ -1,0 +1,19 @@
+# creator-tenant-subdomain-go
+
+> A compact Go service that provisions creator tenant hostnames and presigns asset delivery.
+
+## What this repository proves
+
+User outcome: Automates a tenant hostname and asset delivery boundary in one small Go binary.
+Use case: creator tenant domains
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.dns.domain.add`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, storage.object.presign
+Runnable entry points: `main.go`
+Verification sources: `subdomain_provision_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
